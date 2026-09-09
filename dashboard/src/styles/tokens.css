@@ -1,0 +1,45 @@
+/* Frame Design Tokens */
+:root {
+  /* Color — terminal/git feel */
+  --color-base: #0D0F12;
+  --color-surface: #14171C;
+  --color-surface-raised: #1A1E24;
+  --color-border: #2A2F36;
+  --color-text: #EDEDEE;
+  --color-text-secondary: #8A9099;
+  --color-accent: #E8B84B;
+  --color-accent-dim: #B8922E;
+  --color-success: #34D399;
+  --color-error: #F87171;
+  --color-neutral: #4A5058;
+
+  /* Type — monospace for data, grotesk for labels */
+  --font-mono: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Radius — minimal, utilitarian */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+
+  /* Transitions */
+  --transition-fast: 120ms ease;
+  --transition-normal: 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+  }
+}
