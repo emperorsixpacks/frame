@@ -1,0 +1,47 @@
+{
+  "prompts": {
+    "frame_system": {
+      "file": "frame_system.md",
+      "description": "Main system prompt — full pipeline orchestration",
+      "variables": [
+        "brand_name", "brand_tone", "brand_primary_color",
+        "brand_secondary_color", "brand_text_color", "brand_dos",
+        "brand_donts", "confidence_threshold"
+      ]
+    },
+    "promo_judge": {
+      "file": "promo_judge.md",
+      "description": "Step 1 — judge promo-worthiness of a PR/release",
+      "variables": [
+        "brand_name", "pr_title", "pr_body",
+        "changed_files_summary", "diff_stats"
+      ]
+    },
+    "storyboard": {
+      "file": "storyboard.md",
+      "description": "Step 2 — draft 3-scene storyboard from a change",
+      "variables": [
+        "brand_name", "brand_tone", "brand_primary_color",
+        "brand_text_color", "pr_title", "pr_body",
+        "changed_files_summary"
+      ]
+    },
+    "remotion_writer": {
+      "file": "remotion_writer.md",
+      "description": "Step 3 — write Remotion JSX from a storyboard",
+      "variables": [
+        "brand_name", "brand_primary_color", "brand_secondary_color",
+        "brand_text_color", "storyboard_json"
+      ]
+    },
+    "brand_confidence": {
+      "file": "brand_confidence.md",
+      "description": "Step 4 — evaluate brand confidence of generated output",
+      "variables": [
+        "brand_name", "brand_tone", "brand_primary_color",
+        "brand_secondary_color", "brand_text_color", "brand_dos",
+        "brand_donts", "storyboard_json", "remotion_code"
+      ]
+    }
+  }
+}
